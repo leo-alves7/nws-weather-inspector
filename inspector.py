@@ -66,6 +66,7 @@ class NWSClient:
             ("severity", "Extreme"),
             ("severity", "Severe"),
             ("severity", "Moderate"),
+            ("region_type", "land"),
             ("limit", ALERT_LIMIT),
         ]
         if cursor:

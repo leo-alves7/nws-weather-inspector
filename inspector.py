@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import argparse
 import asyncio
 import json
@@ -61,10 +63,9 @@ class NWSClient:
     async def get_alerts(self, cursor: str | None = None) -> dict:
         params: list[tuple[str, str | int]] = [
             ("status", "actual"),
-            ("severity", "extreme"),
-            ("severity", "severe"),
-            ("severity", "moderate"),
-            ("regionType", "land"),
+            ("severity", "Extreme"),
+            ("severity", "Severe"),
+            ("severity", "Moderate"),
             ("limit", ALERT_LIMIT),
         ]
         if cursor:

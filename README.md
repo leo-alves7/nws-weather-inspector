@@ -61,6 +61,27 @@ python inspector.py --output /path/to/my-report.json
 
 ---
 
+## UI Dashboard
+
+A browser-based dashboard lets anyone view the weather data without touching the JSON directly. It shows alert counts, a filterable and sortable alerts table, and zone forecasts where available.
+
+```bash
+# Install dependencies (includes the server libraries)
+pip install -r requirements.txt
+
+# Step 1 - run the inspector to generate the data
+python inspector.py
+
+# Step 2 - start the dashboard server
+python server.py
+```
+
+Then open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
+
+The pre-built UI is included in `ui/dist/`. To modify the frontend you need Node 20+ - run `npm install` inside the `ui/` folder, make your changes, then `npm run build`.
+
+---
+
 ## Run with Docker
 
 ```bash
